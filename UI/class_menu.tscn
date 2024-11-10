@@ -1,0 +1,182 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0mnxqe0x4pyy"]
+
+[ext_resource type="Shader" path="res://UI/class_image.gdshader" id="1_82oka"]
+[ext_resource type="Theme" uid="uid://8nx6s5mk1kde" path="res://UI/main_theme.tres" id="1_buxb7"]
+[ext_resource type="Script" path="res://UI/class_button.gd" id="2_3nhdq"]
+[ext_resource type="Resource" uid="uid://bf5urwgmkru86" path="res://chess/ChessKing.tres" id="3_q88l0"]
+[ext_resource type="Resource" uid="uid://dqeeueaug1adb" path="res://chess/ChessQueen.tres" id="4_hp4wd"]
+[ext_resource type="Resource" uid="uid://liylagrg3v48" path="res://chess/ChessBishop.tres" id="5_c4eyr"]
+[ext_resource type="Resource" uid="uid://dvvhdo3q8q52w" path="res://chess/ChessKnight.tres" id="6_pqaan"]
+[ext_resource type="Resource" uid="uid://r3mphjqa1yso" path="res://chess/ChessPawn.tres" id="7_ln8lq"]
+[ext_resource type="Resource" uid="uid://dviewwf0mxebj" path="res://chess/ChessRoot.tres" id="8_ia21x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33322"]
+shader = ExtResource("1_82oka")
+shader_parameter/pixel_sc = 64.0
+
+[node name="ClassMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+material = SubResource("ShaderMaterial_33322")
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+expand_mode = 1
+stretch_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AttackOrDefendLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_buxb7")
+theme_override_font_sizes/font_size = 70
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_buxb7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_buxb7")
+text = "Choose your class"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_buxb7")
+columns = 6
+
+[node name="BlackKingButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♔"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("3_q88l0")
+is_black = true
+
+[node name="BlackQueenButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♕"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("4_hp4wd")
+
+[node name="BlackBishopButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♗"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("5_c4eyr")
+is_black = true
+
+[node name="BlackKnightButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♘"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("6_pqaan")
+is_black = true
+
+[node name="BlackPawnButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♙"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("7_ln8lq")
+is_black = true
+
+[node name="BlackRootButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♖"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("8_ia21x")
+is_black = true
+
+[node name="WhiteKingButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♚"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("3_q88l0")
+
+[node name="WhiteQueenButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♛"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("4_hp4wd")
+
+[node name="WhiteBishopButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♝"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("5_c4eyr")
+
+[node name="WhiteKnightButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♞"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("6_pqaan")
+
+[node name="WhitePawnButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♟"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("7_ln8lq")
+
+[node name="WhiteRootButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_buxb7")
+text = "♜"
+script = ExtResource("2_3nhdq")
+button_class = ExtResource("8_ia21x")
