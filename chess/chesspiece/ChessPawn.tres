@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://r3mphjqa1yso"]
+[gd_resource type="Resource" script_class="TrumpClass" load_steps=3 format=3 uid="uid://r3mphjqa1yso"]
 
 [ext_resource type="Texture2D" uid="uid://cdtj17axiwie1" path="res://arts/images/solider.png" id="1_n8qt6"]
 [ext_resource type="Script" path="res://chess/chess_class.gd" id="1_osxo2"]
@@ -9,5 +9,5 @@ chess_class = "Pawn"
 chess_icon = ""
 chess_icon_white = "♟"
 chess_icon_black = "♙"
-weapon = "🗡️"
+weapon = ""
 image = ExtResource("1_n8qt6")

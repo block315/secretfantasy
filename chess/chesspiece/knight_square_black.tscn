@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsbnxdp701oug"]
+
+[ext_resource type="Script" path="res://chess/chess_square.gd" id="1_wtgu0"]
+[ext_resource type="Resource" uid="uid://dvvhdo3q8q52w" path="res://chess/chesspiece/ChessKnight.tres" id="2_f3w6w"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_wtgu0")
+chess = ExtResource("2_f3w6w")
+is_black = true

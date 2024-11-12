@@ -7,24 +7,24 @@ uniform float pixel_sc=64.;
 
 void vertex() {
 	angle=mat4(mat3(MODEL_MATRIX))+mat4(vec4(0.),vec4(0.),vec4(0.,0.,1.,0.),vec4(0.,0.,0.,1.));
-	
+
 	mat3 rotation = mat3(angle);
-    
+
     mat3 inverseRotation3x3 = transpose(rotation);
-    
+
     mat4 inverseRotation4x4 =mat4(inverseRotation3x3)+mat4(vec4(0.),vec4(0.),vec4(0.,0.,1.,0.),vec4(0.,0.,0.,1.));
 	anti_angle=inverseRotation4x4;
 }
 
 void fragment() {
 	float pixel_size=1./pixel_sc;
-	
+
 	vec2 uv=UV-.5;
 	uv*=pixel_sc;
 	uv=(anti_angle*vec4(floor((angle*vec4(uv,0.,1.)).xy),0.,1.)).xy/(pixel_sc-1.)+.5+pixel_size/2.;
-	
+
 	vec4 color_1=texture(TEXTURE,uv);
-	
+
 	color_1.a=step(0.5,color_1.a);
 
 	vec3 color_c=color_1.rgb;

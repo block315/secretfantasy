@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://cyhy3cyngvo3c"]
+
+[ext_resource type="PackedScene" uid="uid://dysde6rk6sfn4" path="res://trump/clover_square.tscn" id="1_4gxwq"]
+[ext_resource type="PackedScene" uid="uid://cdwa6ojnuyt83" path="res://trump/diamond_square.tscn" id="2_3mknm"]
+[ext_resource type="PackedScene" uid="uid://dyx4hdidd1751" path="res://trump/heart_square.tscn" id="3_y118t"]
+[ext_resource type="PackedScene" uid="uid://xyy3upriegnf" path="res://trump/spade_square.tscn" id="4_gmk23"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_1ieje"]
+scenes/1/scene = ExtResource("1_4gxwq")
+scenes/2/scene = ExtResource("2_3mknm")
+scenes/3/scene = ExtResource("3_y118t")
+scenes/4/scene = ExtResource("4_gmk23")
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_1ieje")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://n6o7h0uvw8jy"]
+
+[ext_resource type="Theme" uid="uid://durr1qstk3tvn" path="res://trump/trump_theme.tres" id="1_53rle"]
+[ext_resource type="Script" path="res://chess/chess_square.gd" id="1_lnup8"]
+[ext_resource type="Resource" uid="uid://bf5urwgmkru86" path="res://chess/chesspiece/ChessKing.tres" id="2_iuonq"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_53rle")
+script = ExtResource("1_lnup8")
+chess = ExtResource("2_iuonq")
+is_black = true

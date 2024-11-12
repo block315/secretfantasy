@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg11jq03je0hw"]
+
+[ext_resource type="Script" path="res://chess/chess_square.gd" id="1_qaaad"]
+[ext_resource type="Resource" uid="uid://bf5urwgmkru86" path="res://chess/chesspiece/ChessKing.tres" id="2_655m5"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+script = ExtResource("1_qaaad")
+chess = ExtResource("2_655m5")

@@ -1,0 +1,37 @@
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://87tt0y4pnab"]
+
+[ext_resource type="PackedScene" uid="uid://bv08qd7uhog3p" path="res://chess/chesspiece/bishop_square_black.tscn" id="1_k8kaw"]
+[ext_resource type="PackedScene" uid="uid://n6o7h0uvw8jy" path="res://chess/chesspiece/king_square_black.tscn" id="2_ymex3"]
+[ext_resource type="PackedScene" uid="uid://bsbnxdp701oug" path="res://chess/chesspiece/knight_square_black.tscn" id="3_0for3"]
+[ext_resource type="PackedScene" uid="uid://rvmejhkl2vfm" path="res://chess/chesspiece/pawn_square_black.tscn" id="4_svrla"]
+[ext_resource type="PackedScene" uid="uid://bvpeb32u04tqe" path="res://chess/chesspiece/queen_square_black.tscn" id="5_1mt01"]
+[ext_resource type="PackedScene" uid="uid://blg8e4xxlyfyj" path="res://chess/chesspiece/rook_square_black.tscn" id="6_fcr6s"]
+[ext_resource type="PackedScene" uid="uid://benc58a8n1k3f" path="res://chess/chesspiece/bishop_square_white.tscn" id="7_86vt4"]
+[ext_resource type="PackedScene" uid="uid://cg11jq03je0hw" path="res://chess/chesspiece/king_square_white.tscn" id="8_sl7r6"]
+[ext_resource type="PackedScene" uid="uid://djepeks08bmod" path="res://chess/chesspiece/knight_square_white.tscn" id="9_cbgj7"]
+[ext_resource type="PackedScene" uid="uid://dctg4srsilngf" path="res://chess/chesspiece/pawn_square_white.tscn" id="10_sah38"]
+[ext_resource type="PackedScene" uid="uid://b6544p4w3r3" path="res://chess/chesspiece/queen_square_white.tscn" id="11_5bv4v"]
+[ext_resource type="PackedScene" uid="uid://sal10d5hhh2u" path="res://chess/chesspiece/rook_square_white.tscn" id="12_fpu5g"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_lb2o1"]
+resource_name = "Black"
+scenes/1/scene = ExtResource("1_k8kaw")
+scenes/2/scene = ExtResource("2_ymex3")
+scenes/3/scene = ExtResource("3_0for3")
+scenes/4/scene = ExtResource("4_svrla")
+scenes/5/scene = ExtResource("5_1mt01")
+scenes/6/scene = ExtResource("6_fcr6s")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ud6np"]
+resource_name = "White"
+scenes/1/scene = ExtResource("7_86vt4")
+scenes/2/scene = ExtResource("8_sl7r6")
+scenes/3/scene = ExtResource("9_cbgj7")
+scenes/4/scene = ExtResource("10_sah38")
+scenes/5/scene = ExtResource("11_5bv4v")
+scenes/6/scene = ExtResource("12_fpu5g")
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_lb2o1")
+sources/1 = SubResource("TileSetScenesCollectionSource_ud6np")

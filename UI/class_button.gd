@@ -13,6 +13,7 @@ func _ready() -> void:
 	else:
 		text = button_class.chess_icon_white
 	mouse_entered.connect(display_class_information)
+	pressed.connect(chess_start)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,3 +27,10 @@ func display_class_information() -> void:
 	else:
 		attack_or_defend_label.text = "You\nHave to\nDefend"
 	texture_rect.texture = button_class.image
+
+func chess_start():
+	if is_black:
+		PlayerStatus.is_black = true
+	else:
+		PlayerStatus.is_black = false
+	get_tree().change_scene_to_file("res://stages/stage1.tscn")

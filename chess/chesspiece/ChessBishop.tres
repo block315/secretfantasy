@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://liylagrg3v48"]
+[gd_resource type="Resource" script_class="TrumpClass" load_steps=3 format=3 uid="uid://liylagrg3v48"]
 
 [ext_resource type="Script" path="res://chess/chess_class.gd" id="1_g5v31"]
 [ext_resource type="Texture2D" uid="uid://eb8q12qnqygr" path="res://arts/images/priest.png" id="1_psrda"]
@@ -9,5 +9,5 @@ chess_class = "Bishop"
 chess_icon = ""
 chess_icon_white = "♝"
 chess_icon_black = "♗"
-weapon = "🗡️"
+weapon = ""
 image = ExtResource("1_psrda")

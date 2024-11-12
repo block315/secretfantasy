@@ -3,12 +3,12 @@
 [ext_resource type="Shader" path="res://UI/class_image.gdshader" id="1_82oka"]
 [ext_resource type="Theme" uid="uid://8nx6s5mk1kde" path="res://UI/main_theme.tres" id="1_buxb7"]
 [ext_resource type="Script" path="res://UI/class_button.gd" id="2_3nhdq"]
-[ext_resource type="Resource" uid="uid://bf5urwgmkru86" path="res://chess/ChessKing.tres" id="3_q88l0"]
-[ext_resource type="Resource" uid="uid://dqeeueaug1adb" path="res://chess/ChessQueen.tres" id="4_hp4wd"]
-[ext_resource type="Resource" uid="uid://liylagrg3v48" path="res://chess/ChessBishop.tres" id="5_c4eyr"]
-[ext_resource type="Resource" uid="uid://dvvhdo3q8q52w" path="res://chess/ChessKnight.tres" id="6_pqaan"]
-[ext_resource type="Resource" uid="uid://r3mphjqa1yso" path="res://chess/ChessPawn.tres" id="7_ln8lq"]
-[ext_resource type="Resource" uid="uid://dviewwf0mxebj" path="res://chess/ChessRoot.tres" id="8_ia21x"]
+[ext_resource type="Resource" uid="uid://bf5urwgmkru86" path="res://chess/chesspiece/ChessKing.tres" id="3_q88l0"]
+[ext_resource type="Resource" uid="uid://dqeeueaug1adb" path="res://chess/chesspiece/ChessQueen.tres" id="4_hp4wd"]
+[ext_resource type="Resource" uid="uid://liylagrg3v48" path="res://chess/chesspiece/ChessBishop.tres" id="5_c4eyr"]
+[ext_resource type="Resource" uid="uid://dvvhdo3q8q52w" path="res://chess/chesspiece/ChessKnight.tres" id="6_pqaan"]
+[ext_resource type="Resource" uid="uid://r3mphjqa1yso" path="res://chess/chesspiece/ChessPawn.tres" id="7_ln8lq"]
+[ext_resource type="Resource" uid="uid://dviewwf0mxebj" path="res://chess/chesspiece/ChessRook.tres" id="8_ia21x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33322"]
 shader = ExtResource("1_82oka")

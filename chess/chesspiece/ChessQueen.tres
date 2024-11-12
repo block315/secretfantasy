@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://dqeeueaug1adb"]
+[gd_resource type="Resource" script_class="TrumpClass" load_steps=3 format=3 uid="uid://dqeeueaug1adb"]
 
 [ext_resource type="Texture2D" uid="uid://dmmfm11g6qm0s" path="res://arts/images/queen.png" id="1_7r1fs"]
 [ext_resource type="Script" path="res://chess/chess_class.gd" id="1_80wte"]
@@ -9,5 +9,5 @@ chess_class = "Queen"
 chess_icon = ""
 chess_icon_white = "♛"
 chess_icon_black = "♕"
-weapon = "🗡️"
+weapon = ""
 image = ExtResource("1_7r1fs")

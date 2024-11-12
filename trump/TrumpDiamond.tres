@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TrumpClass" load_steps=2 format=3 uid="uid://dwoqqam7ehafn"]
+
+[ext_resource type="Script" path="res://trump/trump_class.gd" id="1_bvfen"]
+
+[resource]
+script = ExtResource("1_bvfen")
+trump_class = "Diamond"
+trump_icon = "◇"
+trump_icon_filled = "♦"

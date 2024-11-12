@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://rvmejhkl2vfm"]
+
+[ext_resource type="Script" path="res://chess/chess_square.gd" id="1_ca32c"]
+[ext_resource type="Resource" uid="uid://r3mphjqa1yso" path="res://chess/chesspiece/ChessPawn.tres" id="2_kcniu"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_ca32c")
+chess = ExtResource("2_kcniu")
+is_black = true

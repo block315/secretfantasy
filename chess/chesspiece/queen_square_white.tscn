@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6544p4w3r3"]
+
+[ext_resource type="Script" path="res://chess/chess_square.gd" id="1_wg0cl"]
+[ext_resource type="Resource" uid="uid://dqeeueaug1adb" path="res://chess/chesspiece/ChessQueen.tres" id="2_8a8ca"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_wg0cl")
+chess = ExtResource("2_8a8ca")
