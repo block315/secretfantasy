@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="TrumpClass" load_steps=3 format=3 uid="uid://dviewwf0mxebj"]
+[gd_resource type="Resource" script_class="ChessClass" load_steps=3 format=3 uid="uid://dviewwf0mxebj"]
 
 [ext_resource type="Texture2D" uid="uid://cgstje7myqg5l" path="res://arts/images/castle.png" id="1_mmafe"]
 [ext_resource type="Script" path="res://chess/chess_class.gd" id="2_s24ff"]
@@ -9,5 +9,9 @@ chess_class = "Rook"
 chess_icon = ""
 chess_icon_white = "♜"
 chess_icon_black = "♖"
-weapon = ""
 image = ExtResource("1_mmafe")
+weapon = ""
+range = 1
+mobile = false
+strength = 0
+health = 1000

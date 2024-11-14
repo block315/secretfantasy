@@ -50,7 +50,7 @@ size_flags_horizontal = 3
 [node name="AttackOrDefendLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_buxb7")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 40
 
 [node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -72,6 +72,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_buxb7")
+theme_override_font_sizes/font_size = 20
 text = "Choose your class"
 horizontal_alignment = 1
 

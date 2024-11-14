@@ -13,6 +13,16 @@ const original_board_size := 8
 @onready var trump: TileMapLayer = $Trump
 @onready var chess_piece: TileMapLayer = $ChessPiece
 
+var chess_class: Array[ChessClass] = [
+	preload("res://chess/chesspiece/ChessBishop.tres"), # ignore 0
+	preload("res://chess/chesspiece/ChessBishop.tres"),
+	preload("res://chess/chesspiece/ChessKing.tres"),
+	preload("res://chess/chesspiece/ChessKnight.tres"),
+	preload("res://chess/chesspiece/ChessPawn.tres"),
+	preload("res://chess/chesspiece/ChessQueen.tres"),
+	preload("res://chess/chesspiece/ChessRook.tres"),
+	]
+
 var board_length:int
 
 func _ready() -> void:
@@ -42,25 +52,22 @@ func move():
 		var cell_sid = chess_piece.get_cell_source_id(pos)
 		var cell_aid = chess_piece.get_cell_alternative_tile(pos)
 		var cell_acrd = chess_piece.get_cell_atlas_coords(pos)
-
-		# Root can't move
-		if cell_aid == 6:
+		
+		if !chess_class[cell_aid].mobile:
 			continue
-
-		var new_pos = pos + Vector2i(randi_range(-1, 1), randi_range(-1, 1))
-
+		
+		var new_pos = pos \
+			+ Vector2i(randi_range(-chess_class[cell_aid].range, chess_class[cell_aid].range), \
+			randi_range(-chess_class[cell_aid].range, chess_class[cell_aid].range))
+		
 		# Stay in side the board
 		if new_pos.x >= board_length or new_pos.x < -board_length \
 			or new_pos.y >= board_length or new_pos.y < -board_length:
 			continue
+		
 		# Don't collide each other
 		if chess_piece.get_cell_source_id(new_pos) != -1:
-			# Kill other side
-			if chess_piece.get_cell_source_id(new_pos) == cell_sid:
-				continue
-			# Can't kill rooks
-			if chess_piece.get_cell_alternative_tile(new_pos) == 6:
-				continue
-
+			continue
+		
 		chess_piece.erase_cell(pos)
 		chess_piece.set_cell(new_pos, cell_sid, cell_acrd, cell_aid)
